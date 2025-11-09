@@ -9,6 +9,11 @@ import Login from "./pages/admin/Login";
 import { AdminLayout } from "./components/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import Customers from "./pages/admin/Customers";
+import Services from "./pages/admin/Services";
+import Quotations from "./pages/admin/Quotations";
+import Invoices from "./pages/admin/Invoices";
+import Ledgers from "./pages/admin/Ledgers";
+import Settings from "./pages/admin/Settings";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +29,11 @@ const App = () => (
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="customers" element={<Customers />} />
+            <Route path="services" element={<Services />} />
+            <Route path="quotations" element={<Quotations />} />
+            <Route path="invoices" element={<Invoices />} />
+            <Route path="ledgers" element={<Ledgers />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
